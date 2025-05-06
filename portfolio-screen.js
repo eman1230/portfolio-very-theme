@@ -5,8 +5,6 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
-import "./portfolio-screen"
-import "./portfolio-header"
 
 /**
  * `portfolio-very-theme`
@@ -14,10 +12,10 @@ import "./portfolio-header"
  * @demo index.html
  * @element portfolio-very-theme
  */
-export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
+export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
-    return "portfolio-very-theme";
+    return "portfolio-screen";
   }
 
   constructor() {
@@ -51,29 +49,47 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     css`
       :host {
         display: block;
+        padding: 100px;
+        width: calc(100vw - 200px);
+        overflow-x: hidden;
+        height: 100vh;
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
       }
-      .wrapper {
-        flex-wrap: wrap;
+      .wrapper{
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      h3{
+        font-family: 'Times New Roman', Times, serif;
       }
       h3 span {
         font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
       }
+      :host(.about){
+        background-color: var(--ddd-theme-default-accent);
+      }
+      :host(.resume) {
+        background-color: var(--ddd-theme-default-beaver80);
+      }
+      :host(.clubs) {
+        background-color: var(--ddd-theme-default-navy40)
+      }
+      :host(.leadership) {
+        background-color: var(--ddd-theme-default-slateGray)
+      }
+      :host(.connect) {
+        background-color: var(--ddd-theme-default-pughBlue)
+      }
     `];
   }
-
-  scrolltoTop(){
-    document.querySelectorAll()
-  }
-
-
 
   // Lit render the HTML
   render() {
     return html`
 <div class="wrapper">
+  <h3>${this.title}</h3>
   <slot></slot>
 </div>`;
   }
@@ -87,4 +103,4 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);
+globalThis.customElements.define(PortfolioScreen.tag, PortfolioScreen);
