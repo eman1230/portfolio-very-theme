@@ -53,7 +53,37 @@
     .resumeinfo a:active {
       color: white;
     }
+    portfolio-screen{
+      overflow: hidden;
+    }
+    .farm{
+      width: 320px;
+      height: 240px;
+    }
+    
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0 auto;
+      max-width: 800px;
+    }
 
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 700px;
+      height: 425px;
+      background-color: white;
+    }
+    .connectinfo{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
   </style>
   <title>portfolio-very-theme</title>
@@ -91,7 +121,8 @@
               designed to give students academic outlet to pursue and refine their cyber defense and security skills.</p>
             <p><strong>PicoCTF:</strong> A cybersecurity capture the flag (CTF) competition in which individuals
             complete cybersecurity challenges.</p>
-            <p><strong>Irvings Bagel's:</strong> Responsible for supervising and managing a team of up to 15 employees throughout hours of operation.</p>
+            <p><strong>Irvings Bagel's:</strong> Achieved customer satisfaction through time management, 
+              direction-following, and interpersonal skills.</p>
             <h3>Education</h3>
             <p>The Pennsylvania State University — B.S. Cybersecurity Analytics and Operations (Pursuing)</p>
             <p>Download my full resume <a href="resume.pdf" download=""><strong>here</strong></a></p>
@@ -101,18 +132,40 @@
           <div class="clubinfo">
             <h3>HAX the Club</h3>
             <p> - Open source web development club focused on making web development free and accessible</p>
+            <img src="hax.png" class="haximg">
             <h3>Penn State Club Climbing</h3>
-            <p> - Penn State's competitive climbing club</p>
+            <p> - Penn State's competitive climbing club, competed in national competitons and practice multiple
+              times a week.
+            </p>
+            <h3>Open Source Software Interest Club (OSSIG)</h3>
+            <p> - Explores the function and application of different open source software</p>
           </div>
         </portfolio-screen>
         <portfolio-screen class="leadership" id="4" title="Work & Leadership">
           <div class="leadinfo">
-            <p>Hello</p>
+            <h3>Althouse Arboretum Student Commitee</h3>
+            <p> - Planned and implemented regular community events revolving around environmental sustainability,
+               as well as recruiting volunteers to run and engage with said events.</p>
+            <p> - Maintained and developed a local farm that grew produce which fed over 30 
+              families around a local food desert.</p>
+            <img src="arbfarm.jpg" class="farm">
+            <h3>Irvings Bagels - Crew Leader</h3>
+            <p>Responsible for supervising and managing a team of up to 15 employees throughout hours of operation.</p>
           </div>
         </portfolio-screen>
         <portfolio-screen class="connect" id="5" title="Connect With Me">
           <div class="connectinfo">
-            <p>Hello</p>
+            <div class="form-container">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfsvqQ7N51bBzLlmuxSOCuM7KBwPhtML2mUM-Cfe-49w-oVFw/viewform?embedded=true">
+                Loading…
+              </iframe>
+            </div>
+            <div class='connectinfo'>
+              <p><a href="https://github.com/eman1230">Github</a> | <a href="https://www.linkedin.com/in/ethan-matz-6298b4334/">Linkedin</a></p>
+              <p>Email: eg.matz1@gmail.com</p>    
+              <p>Phone Number: (484)-714-9990</p>         
+            </div>
           </div>
         </portfolio-screen>
     </portfolio-very-theme>
